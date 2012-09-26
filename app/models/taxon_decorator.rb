@@ -1,6 +1,6 @@
 module Spree
   Taxon.class_eval do
-    translates :name, :description, :permalink
+    translates :name, :description, :permalink, :fallbacks_for_empty_translations => true
 
     # Public : Permalink setter with multi language support
     #
