@@ -6,6 +6,7 @@ module SpreeMultiLingual
       def add_javascripts
         append_file "app/assets/javascripts/store/all.js", "//= require store/spree_multi_lingual\n"
         append_file "app/assets/javascripts/admin/all.js", "//= require admin/spree_multi_lingual\n"
+        append_file "app/assets/javascripts/admin/all.js", "//= require admin/taxonomy_decorator\n"
       end
 
       def add_stylesheets

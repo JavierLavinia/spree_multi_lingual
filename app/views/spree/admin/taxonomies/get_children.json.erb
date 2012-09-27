@@ -1,6 +1,7 @@
 [<% @taxons.each_with_index do |t,i| %>
   { "attr" :
-    { "id" : "<%= "#{t.id}_#{@lang}" %>" },
+    { "id" : "<%= t.id %>",
+ 		"lang" : "<%= @lang %>"},
     "data" : "<%= t.send("name#{locale_suffix(@lang)}") %>"
     <% unless t.children.empty? %>
       ,"state" : "closed"

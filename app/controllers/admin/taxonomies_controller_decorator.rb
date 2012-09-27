@@ -1,8 +1,7 @@
 Spree::Admin::TaxonomiesController.class_eval do
   def get_children
-    parent_id, @lang = params[:parent_id].split('_')
-    
-    @taxons = Spree::Taxon.find(parent_id).children
+    @lang = params[:lang]
+    @taxons = Spree::Taxon.find(params[:parent_id]).children
 
     respond_with(@taxons)
   end
