@@ -36,6 +36,8 @@ module TranslatesWithAccessors
           "#{param}_#{locale}".to_sym
         end
       end.flatten
+      
+      params << options
 
       attr_accessible *param_locales
 
